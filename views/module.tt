@@ -17,8 +17,7 @@
         <li><a href="http://cpantesters.org/distro/<% module.distribution.substr(0, 1) %>/<% module.distribution %>.html">Test results</a></li>
         <li><a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=<% module.distribution %>">Report bugs</a></li>
       </ul>
-    </div>
-    <div id="activity">
-      <h1>Activity by month</h1>
-      <object data="http://metacpan.org/activity?res=month&distribution=<$ module.distribution %>" width="170" height="22" type="image/svg+xml" />
-    </div>
+      <div id="activity">
+        <h1>Activity by month</h1>
+        <object data="http://metacpan.org/activity?res=month&distribution=<% module.distribution %>" width="170" height="22" type="image/svg+xml"></object>
+      </div>
