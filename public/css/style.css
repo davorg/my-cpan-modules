@@ -1,0 +1,57 @@
+body, html {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+#header {
+  border-bottom: solid 2px #ccc;
+  padding: 30px 40px 20px 40px;
+}
+
+#content {
+  padding: 10px 40px 20px 40px;
+}
+
+h1, h2 {
+  text-align: left;
+  margin: 0;
+  font-family: arial, helvetica, san-serif;
+  color: #666;
+}
+
+a:link {
+  color: #666;
+}
+
+a:visited {
+  color: #333;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+pre {
+  padding: 2em;
+  margin: 0;
+  background-color: #eee;
+  color: #444;
+}
+
+#activity {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+#activity h1 {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 75%;
+}
