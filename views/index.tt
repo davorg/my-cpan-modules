@@ -1,6 +1,6 @@
 <ul>
 <% FOR module IN modules -%>
-  <li><a href="/<% module.name %>"><% module.name %></a><br>
-    <% module.desc %></li>
+  <li><a href="/<% module.distribution %>"><% module.distribution %></a><br>
+    <% module.abstract %></li>
 <% END -%>
 </ul>

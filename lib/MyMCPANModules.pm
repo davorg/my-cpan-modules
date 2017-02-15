@@ -13,15 +13,27 @@ get '/:modname' => sub {
 
 get '/' => sub {
   my $modules;
-  for my $mod (@{ setting('modules') }) {
-    my %module;
-    $module{name} = $mod;
-    my $data = get_module_data($mod);
-    $module{desc} = $data->{abstract};
-    push @$modules, \%module;
-  }
-  template 'index', { modules => $modules };
+  my $dists = get_distributions();
+  template 'index', { modules => $dists };
 };
+
+sub get_distributions {
+  my $pause_id = setting('pause_id');
+  my $url = 'https://fastapi.metacpan.org/v1/release/_search' .
+            "?q=author:$pause_id%20AND%20status:latest" .
+            '&sort=distribution' .
+            '&size=50' .
+            '&fields=distribution,abstract';
+
+  my $data = from_json(LWP::Simple::get($url));
+  my $dists;
+
+  foreach (@{ $data->{hits}{hits} }) {
+    push @$dists, $_->{fields};
+  }
+
+  return $dists;
+}
 
 sub get_module_data {
   my ($mod) = @_;

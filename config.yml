@@ -51,19 +51,5 @@ engines:
 #      is_secure: 1
 #      is_http_only: 1
 
-modules:
-  - Array-Compare
-  - AudioFile-Info
-  - AudioFile-Info-MP3-ID3Lib
-  - AudioFile-Info-MP3-Info
-  - AudioFile-Info-MP3-Tag
-  - AudioFile-Info-Ogg-Vorbis-Header
-  - AudioFile-Info-Ogg-Vorbis-Header-PurePerl
-  - Calendar-Simple
-  - Guardian-OpenPlatform-API
-  - Net-Backpack
-  - Net-Songkick
-  - Number-Fraction
-  - Parse-RPM-Spec
-  - Perlanet
+pause_id: DAVECROSS
 
