@@ -7,8 +7,9 @@ use LWP::Simple ();
 
 get '/:modname' => sub {
   my $mod = route_parameters->get('modname');
+  my $module = get_module_data($mod);
 
-  template 'module', { module => get_module_data($mod) };
+  template 'module', { module => $module, title => $module->{distribution} };
 };
 
 get '/' => sub {
